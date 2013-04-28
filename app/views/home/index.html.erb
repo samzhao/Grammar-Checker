@@ -1,0 +1,14 @@
+<h2>Instantly correct your grammar mistakes.</h2>
+<div class="row">
+	<div class="span6 input">
+		<h3>Input:</h3>
+		<%= simple_form_for :input, {url: home_index_path, remote: true} do |f| %>
+			<%= f.input :content, placeholder: "Enter text here", label: false, required: false, as: :text, input_html:{ id: "content", class: "input-xxlarge" } %>
+		<% end %>
+	</div>
+
+	<div class="span6 output">
+		<h3>Output:</h3>
+		<div id="display"><%= render "display" %></div>
+	</div>
+</div>
